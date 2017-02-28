@@ -72,8 +72,8 @@ def synset_distance(statement, other_statement, lang='eng', language='english'):
     from chatterbot import utils
     import itertools
 
-    tokens1 = word_tokenize(statement.text.lower())
-    tokens2 = word_tokenize(other_statement.text.lower())
+    tokens1 = word_tokenize(statement.text.lower(), language=language)
+    tokens2 = word_tokenize(other_statement.text.lower(), language=language)
 
     # Remove all stop words from the list of word tokens
     tokens1 = utils.remove_stopwords(tokens1, language=language)
